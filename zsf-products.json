@@ -1,0 +1,68 @@
+[
+  {
+    "id": "rb-001",
+    "title": "Massage Gun Deep Tissue - Quiet Motor",
+    "image": "https://via.placeholder.com/600x600?text=Massage+Gun",
+    "price": 24.99,
+    "orig_price": 89.99,
+    "discount": 72,
+    "orders": 3410,
+    "rating": 4.8,
+    "url": "https://www.aliexpress.com/item/1005000000001.html?aff_fcid=S024f01aac61f477aac2b482dddcf905ea.csv"
+  },
+  {
+    "id": "rb-002",
+    "title": "Smartwatch Fitness Tracker - SpO2 + HR",
+    "image": "https://via.placeholder.com/600x600?text=Smartwatch",
+    "price": 17.49,
+    "orig_price": 59.99,
+    "discount": 71,
+    "orders": 982,
+    "rating": 4.6,
+    "url": "https://www.aliexpress.com/item/1005000000002.html?aff_fcid=S024f01aac61f477aac2b482dddcf905ea.csv"
+  },
+  {
+    "id": "rb-003",
+    "title": "Wireless Earbuds - Noise Cancel",
+    "image": "https://via.placeholder.com/600x600?text=Earbuds",
+    "price": 18.99,
+    "orig_price": 59.99,
+    "discount": 68,
+    "orders": 5220,
+    "rating": 4.8,
+    "url": "https://www.aliexpress.com/item/1005000000003.html?aff_fcid=S024f01aac61f477aac2b482dddcf905ea.csv"
+  },
+  {
+    "id": "rb-004",
+    "title": "Yoga Mat Non-slip 10mm",
+    "image": "https://via.placeholder.com/600x600?text=Yoga+Mat",
+    "price": 12.49,
+    "orig_price": 29.99,
+    "discount": 58,
+    "orders": 890,
+    "rating": 4.6,
+    "url": "https://www.aliexpress.com/item/1005000000004.html?aff_fcid=S024f01aac61f477aac2b482dddcf905ea.csv"
+  },
+  {
+    "id": "rb-005",
+    "title": "Resistance Bands Set - 5 Levels",
+    "image": "https://via.placeholder.com/600x600?text=Resistance+Bands",
+    "price": 6.99,
+    "orig_price": 19.99,
+    "discount": 65,
+    "orders": 1200,
+    "rating": 4.7,
+    "url": "https://www.aliexpress.com/item/1005000000005.html?aff_fcid=S024f01aac61f477aac2b482dddcf905ea.csv"
+  },
+  {
+    "id": "rb-006",
+    "title": "Massage Roller - Deep Tissue",
+    "image": "https://via.placeholder.com/600x600?text=Massage+Roller",
+    "price": 8.99,
+    "orig_price": 24.99,
+    "discount": 64,
+    "orders": 760,
+    "rating": 4.5,
+    "url": "https://www.aliexpress.com/item/1005000000006.html?aff_fcid=S024f01aac61f477aac2b482dddcf905ea.csv"
+  }
+]
