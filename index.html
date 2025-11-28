@@ -74,6 +74,65 @@
             <a href="https://www.twitter.com/" target="_blank">Twitter</a>
         </p>
     </footer>
+<!-- 🕊️ FLOATING WORLD PEACE VIDEO OVERLAY -->
+<div id="peace-video-overlay" style="
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    width: 380px !important;
+    height: 215px !important;
+    z-index: 999999 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+    border-radius: 20px !important;
+    background: #fff !important;
+    cursor: move !important;
+    overflow: hidden !important;
+    border: 3px solid #56ab2f !important;
+">
+    <div style="background: linear-gradient(45deg, #56ab2f, #a8e063); color: white; padding: 8px; text-align: center; font-weight: bold; font-size: 14px;">
+        🕊️ Reuben Soul Live - World Peace Dance
+        <span onclick="toggleVideo()" style="float: right; cursor: pointer; font-size: 18px;">❌</span>
+    </div>
+    <iframe id="live-video" 
+        src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID&autoplay=1" 
+        style="width: 100%; height: 172px; border: none;"
+        allow="autoplay; encrypted-media; fullscreen" allowfullscreen>
+    </iframe>
+</div>
+
+<script>
+// Draggable floating video
+const videoOverlay = document.getElementById('peace-video-overlay');
+let isDragging = false, currentX, currentY, initialX, initialY;
+
+videoOverlay.addEventListener('mousedown', dragStart);
+document.addEventListener('mousemove', drag);
+document.addEventListener('mouseup', dragEnd);
+
+function dragStart(e) {
+    initialX = e.clientX - videoOverlay.getBoundingClientRect().left;
+    initialY = e.clientY - videoOverlay.getBoundingClientRect().top;
+    isDragging = true; videoOverlay.style.transition = 'none';
+}
+function drag(e) {
+    if (isDragging) {
+        currentX = e.clientX - initialX;
+        currentY = e.clientY - initialY;
+        videoOverlay.style.left = currentX + 'px';
+        videoOverlay.style.top = currentY + 'px';
+        videoOverlay.style.right = 'auto';
+        videoOverlay.style.bottom = 'auto';
+    }
+}
+function dragEnd(e) {
+    initialX = currentX; initialY = currentY; isDragging = false;
+    videoOverlay.style.transition = 'all 0.3s ease';
+}
+function toggleVideo() {
+    document.getElementById('live-video').style.display = 
+        document.getElementById('live-video').style.display === 'none' ? 'block' : 'none';
+}
+</script>
 
     <!-- Optional: Additional scripts for interactivity -->
 </body>
