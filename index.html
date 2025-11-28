@@ -1,160 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Marie Kennedy Gobah Zina Peace Wellness - World Peace Through Nutrition</title>
-    <link rel="stylesheet" href="css">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <h1>Welcome to Zina Peace Wellness</h1>
-        <p>Promoting World Peace, Fitness & Wellness</p>
-    </header>
+cd ~/send22/store
 
-    <!-- Live Music / Peace Promotion Section -->
-    <section id="live-stream">
-        <h2>🔴 LIVE Peace & Fitness Show</h2>
-        <p>Join us live as we sing, dance, and promote peace and unity worldwide!</p>
-        <iframe width="100%" height="400" id="main-live-player" src="https://www.youtube.com/embed/live_stream?channel=UCucJzjHDFeuwzXpuQO5Ozlw&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
-    </section>
+# 1. Create aliexpress.json (your affiliate products)
+cat > aliexpress.json << 'EOF'
+[
+  {
+    "name": "USB-C Fast Charging Cable",
+    "price": "9.99",
+    "image": "https://ae01.alicdn.com/kf/Hc2b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b/USB-C-Cable.jpg",
+    "description": "3m fast charging for peace warriors",
+    "url": "https://aliexpress.com/your-affiliate-link"
+  },
+  {
+    "name": "Polarized Sunglasses",
+    "price": "19.99",
+    "image": "https://ae01.alicdn.com/kf/Hc2b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b/Sunglasses.jpg",
+    "description": "UV protection for outdoor peace dance",
+    "url": "https://aliexpress.com/your-affiliate-link"
+  }
+]
+EOF
 
-    <!-- Products Section -->
-    <section id="shop">
-        <h2>Our Products</h2>
-        <div id="products-list" class="products-grid"></div>
-    </section>
+# 2. Create css folder + style.css
+mkdir -p css
+cat > css/style.css << 'EOF'
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+header { text-align: center; padding: 3rem; }
+#live-stream { max-width: 1200px; margin: 2rem auto; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 20px; }
+.products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 2rem auto; padding: 2rem; }
+.product-card { background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 20px; text-align: center; }
+.product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 15px; }
+.btn-primary { background: linear-gradient(45deg, #ff6b6b, #ff8e8e); color: white; padding: 1rem 2rem; border: none; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 1rem; }
+footer { text-align: center; padding: 3rem; background: rgba(0,0,0,0.3); margin-top: 4rem; }
+EOF
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Zina Peace Wellness | Created by Reuben Soul, World Peace & Fitness Ambassador</p>
-        <p>Follow us on 
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a> | 
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a> | 
-            <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
-        </p>
-    </footer>
-
-    <!-- 🕊️ FLOATING REUBEN LIVE VIDEO -->
-    <div id="peace-video-overlay" style="
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 380px;
-      height: 215px;
-      z-index: 999999;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      border-radius: 20px;
-      background: #fff;
-      cursor: move;
-      overflow: hidden;
-      border: 3px solid #56ab2f;">
-        <div id="video-header" style="
-          background: linear-gradient(45deg, #56ab2f, #a8e063);
-          color: white;
-          padding: 8px;
-          text-align: center;
-          font-weight: bold;
-          font-size: 14px;
-          line-height: 1.2;">
-            🔴 Reuben Singing4Peace LIVE
-            <span onclick="toggleVideo()" style="float: right; cursor: pointer; font-size: 18px;">❌</span>
-        </div>
-        <iframe id="live-video" src="https://www.tiktok.com/@reubensing4peace/embed/v2/7571322201652104462" frameborder="0" allowfullscreen style="width:100%; height:172px; border:none;"></iframe>
-    </div>
-
-<script>
-// LOAD YOUR PRODUCTS FROM JSON
-fetch('aliexpress.json')
-    .then(response => response.json())
-    .then(products => {
-        const productsList = document.getElementById('products-list');
-        products.forEach(product => {
-            const card = document.createElement('div');
-            card.className = 'product-card';
-            card.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
-                <div class="product-name">${product.name}</div>
-                <div class="product-price">$${product.price}</div>
-                <div class="product-desc">${product.description}</div>
-                <a href="${product.url}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Buy Now</a>
-            `;
-            productsList.appendChild(card);
-        });
-    });
-
-// FLOATING VIDEO SYSTEM - YOUR VIDEOS
-const videoOverlay = document.getElementById('peace-video-overlay');
-const videoHeader = document.getElementById('video-header');
-const liveVideo = document.getElementById('live-video');
-
-const LIVE_SOURCES = [
-    {name: 'TikTok Live', url: 'https://www.tiktok.com/@reubensing4peace/embed/v2/live'},
-    {name: 'YouTube Live', url: 'https://www.youtube.com/embed/live_stream?channel=UCucJzjHDFeuwzXpuQO5Ozlw&autoplay=1&mute=1'}
-];
-
-const performanceVideos = [
-    {platform: 'tiktok', embed: 'https://www.tiktok.com/@reubensing4peace/embed/v2/7571322201652104462'},
-    {platform: 'tiktok', embed: 'https://www.tiktok.com/@reubensing4peace/embed/v2/7496405858843118891'},
-    {platform: 'youtube', embed: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ'}
-];
-
-let currentVideoIndex = 0;
-let isDragging = false, currentX, currentY, initialX, initialY;
-
-// Draggable floating video
-videoOverlay.addEventListener('mousedown', dragStart);
-document.addEventListener('mousemove', drag);
-document.addEventListener('mouseup', dragEnd);
-
-function dragStart(e) { 
-    initialX = e.clientX - videoOverlay.getBoundingClientRect().left; 
-    initialY = e.clientY - videoOverlay.getBoundingClientRect().top; 
-    isDragging = true; 
-    videoOverlay.style.transition = 'none'; 
-}
-function drag(e) { 
-    if (isDragging) { 
-        currentX = e.clientX - initialX; 
-        currentY = e.clientY - initialY; 
-        videoOverlay.style.left = currentX + 'px'; 
-        videoOverlay.style.top = currentY + 'px'; 
-        videoOverlay.style.right = 'auto'; 
-        videoOverlay.style.bottom = 'auto'; 
-    } 
-}
-function dragEnd(e) { 
-    initialX = currentX; 
-    initialY = currentY; 
-    isDragging = false; 
-    videoOverlay.style.transition = 'all 0.3s ease'; 
-}
-function toggleVideo() { 
-    liveVideo.style.display = liveVideo.style.display === 'none' ? 'block' : 'none'; 
-}
-
-// Cycle videos
-function nextPerformanceVideo() {
-    const video = performanceVideos[currentVideoIndex];
-    liveVideo.src = video.embed;
-    videoHeader.innerHTML = `🎵 ${video.platform.toUpperCase()} Video ${currentVideoIndex + 1} <span onclick="toggleVideo()" style="float: right; cursor: pointer; font-size: 18px;">❌</span>`;
-    currentVideoIndex = (currentVideoIndex + 1) % performanceVideos.length;
-}
-
-// Check live status
-function checkLiveStatus() {
-    const randomLiveSource = LIVE_SOURCES[Math.floor(Math.random() * LIVE_SOURCES.length)];
-    liveVideo.src = randomLiveSource.url;
-    videoHeader.innerHTML = `🔴 ${randomLiveSource.name} <span onclick="toggleVideo()" style="float: right; cursor: pointer; font-size: 18px;">❌</span>`;
-}
-
-// Start video cycle and live check
-nextPerformanceVideo();
-setInterval(() => {
-    if (Math.random() > 0.7) checkLiveStatus();
-    else nextPerformanceVideo();
-}, 35000);
-</script>
-</body>
-</html>
+# Update index.html to use style.css
+sed -i 's|href="css"|href="css/style.css"|' index.html
