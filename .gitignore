@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+env.bak/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Sensitive
+.env
+*.swp
+*.csv.swp
+
+# Directories you don't want
+peacewebsite_migration/
+zsf_store/
+zsf_store_full/
+
+# Logs
+*.log

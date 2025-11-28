@@ -1,0 +1,162 @@
+<<<<<<< HEAD
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕊️ ZSF Store - Reuben Soul | Peace Through Fitness</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; min-height: 100vh;
+        }
+        .header { 
+            text-align: center; padding: 3rem 2rem; 
+            background: rgba(0,0,0,0.3); backdrop-filter: blur(10px);
+        }
+        .products { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem; max-width: 1400px; margin: 0 auto; padding: 2rem;
+        }
+        .product { 
+            background: rgba(255,255,255,0.15); padding: 2rem; 
+            border-radius: 20px; backdrop-filter: blur(10px); 
+            transition: transform 0.3s;
+        }
+        .product:hover { transform: translateY(-10px); }
+        .price { font-size: 1.8rem; font-weight: bold; color: #ff6f00; }
+        .cta { 
+            background: linear-gradient(45deg, #ff6f00, #ff8f00); 
+            color: white; padding: 1rem 2.5rem; border: none; 
+            border-radius: 50px; font-size: 1.2rem; cursor: pointer; 
+            display: block; margin: 1rem auto 0; text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .cta:hover { transform: scale(1.05); }
+        .footer { 
+            text-align: center; padding: 3rem 2rem; 
+            background: rgba(0,0,0,0.4); margin-top: 4rem;
+        }
+        @media (max-width: 768px) { .products { grid-template-columns: 1fr; padding: 1rem; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🕊️ ZSF Store - Official</h1>
+        <h2>Reuben Soul | Peace Through Premium Nutrition</h2>
+        <p>🌍 Strength for World Peace & Unity</p>
+    </header>
+    
+    <section class="products">
+        <div class="product">
+            <h3>🍃 Essential Family Wellness Pack</h3>
+            <p>Complete daily nutrition for entire family health & vitality</p>
+            <div class="price">$89.99</div>
+            <a href="https://zinasing4peacefitness.com/#contact" class="cta">Buy Now</a>
+        </div>
+        <div class="product">
+            <h3>⚖️ Weight Loss Transformation Kit</h3>
+            <p>30-day natural weight management system + beauty support</p>
+            <div class="price">$129.99</div>
+            <a href="https://zinasing4peacefitness.com/#contact" class="cta">Order Kit</a>
+        </div>
+        <div class="product">
+            <h3>😴 Magnesium + Biotin Sleep Formula</h3>
+            <p>Stress relief & restorative sleep - FREE samples available</p>
+            <div class="price">$39.99</div>
+            <a href="https://zinasing4peacefitness.com/#contact" class="cta">FREE Sample</a>
+        </div>
+        <div class="product">
+            <h3>💪 Premium Protein + Recovery</h3>
+            <p>Post-workout recovery for strength & peace of mind</p>
+            <div class="price">$69.99</div>
+            <a href="https://zinasing4peacefitness.com/#contact" class="cta">Shop Protein</a>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p>📧 stayfitfitnessfun@gmail.com | [stayfitfitnessfun@gmail.com](mailto:stayfitfitnessfun@gmail.com)</p>
+        <p>📱 Live Streams: TikTok Mon/Wed | YouTube Fri/Sun</p>
+        <p><em>"Strength to Stand - Fitness for World Peace" 🕊️</em></p>
+    </footer>
+    
+    <script>
+        // Simple analytics/engagement
+        console.log("🕊️ ZSF Store loaded - Peace Through Fitness");
+    </script>
+</body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Zina Peace Wellness - World Peace Through Nutrition</title>
+    <link rel="stylesheet" href="css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Zina Peace Wellness</h1>
+        <p>Promoting World Peace, Fitness & Wellness 🕊️</p>
+    </header>
+
+    <section id="live-stream">
+        <h2>🔴 LIVE Peace & Fitness Show</h2>
+        <p>Join us live as we sing, dance, and promote peace and unity worldwide!</p>
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/live_stream?channel=UCucJzjHDFeuwzXpuQO5Ozlw&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="shop">
+        <h2>Our Products</h2>
+        <div id="products-list" class="products-grid"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Zina Peace Wellness | Created by Reuben Soul</p>
+        <p>Instagram | Facebook | Twitter</p>
+    </footer>
+
+    <!-- Products from JSON -->
+    <script>
+    fetch('aliexpress.json').then(r=>r.json()).then(products=>{
+        const container=document.getElementById('products-list');
+        products.forEach(p=>{
+            const card=document.createElement('div');
+            card.className='product-card';
+            card.innerHTML=`<img src="${p.image}" alt="${p.name}"><div class="product-name">${p.name}</div><div class="product-price">$${p.price}</div><div class="product-desc">${p.desc||p.description}</div><a href="${p.url}" class="btn btn-primary" target="_blank">Buy Now</a>`;
+            container.appendChild(card);
+        });
+    });
+    </script>
+<!-- 🕊️ FLOATING REUBEN LIVE VIDEO -->
+<div id="peace-video-overlay">
+    <div id="video-header">🔴 Reuben Singing4Peace LIVE <span onclick="toggleVideo()" style="float: right; cursor: pointer; font-size: 18px;">❌</span></div>
+    <iframe id="live-video" src="https://www.tiktok.com/@reubensing4peace/embed/v2/7571322201652104462" frameborder="0" allowfullscreen></iframe>
+</div>
+<script>
+const videoOverlay = document.getElementById("peace-video-overlay"), videoHeader = document.getElementById("video-header"), liveVideo = document.getElementById("live-video");
+let isDragging = false, currentX, currentY, initialX, initialY;
+const performanceVideos = [
+    {platform: "tiktok", embed: "https://www.tiktok.com/@reubensing4peace/embed/v2/7571322201652104462"},
+    {platform: "tiktok", embed: "https://www.tiktok.com/@reubensing4peace/embed/v2/7496405858843118891"},
+    {platform: "youtube", embed: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ"}
+];
+let currentVideoIndex = 0;
+videoOverlay.addEventListener("mousedown", e=>{initialX = e.clientX - videoOverlay.getBoundingClientRect().left; initialY = e.clientY - videoOverlay.getBoundingClientRect().top; isDragging = true; videoOverlay.style.transition = "none"});
+document.addEventListener("mousemove", e=>{if(isDragging){currentX = e.clientX - initialX; currentY = e.clientY - initialY; videoOverlay.style.left = currentX + "px"; videoOverlay.style.top = currentY + "px"; videoOverlay.style.right = "auto"; videoOverlay.style.bottom = "auto"}});
+document.addEventListener("mouseup", ()=>{initialX = currentX; initialY = currentY; isDragging = false; videoOverlay.style.transition = "all 0.3s ease"});
+function toggleVideo(){liveVideo.style.display = liveVideo.style.display === "none" ? "block" : "none"}
+function nextVideo(){const video = performanceVideos[currentVideoIndex]; liveVideo.src = video.embed; videoHeader.innerHTML = `🎵 ${video.platform.toUpperCase()} Video ${currentVideoIndex + 1} <span onclick="toggleVideo()" style="float: right; cursor: pointer; font-size: 18px;">❌</span>`; currentVideoIndex = (currentVideoIndex + 1) % performanceVideos.length}
+nextVideo(); setInterval(nextVideo, 35000);
+</script>
+<style>#peace-video-overlay{position:fixed!important;bottom:30px!important;right:30px!important;width:380px!important;height:215px!important;z-index:999999!important;box-shadow:0 10px 30px rgba(0,0,0,0.5)!important;border-radius:20px!important;background:#fff!important;cursor:move!important;overflow:hidden!important;border:3px solid #56ab2f!important}#video-header{background:linear-gradient(45deg,#56ab2f,#a8e063)!important;color:white!important;padding:8px!important;text-align:center!important;font-weight:bold!important;font-size:14px!important;line-height:1.2!important}#live-video{width:100%!important;height:172px!important;border:none!important}@media(max-width:768px){#peace-video-overlay{width:300px!important;height:170px!important;bottom:20px!important;right:20px!important}#live-video{height:135px!important}}</style>
+<!-- END FLOATING VIDEO -->
+</body>
+</html>
+
+>>>>>>> b386c63 (🕊️ Auto-deploy with floating video)
