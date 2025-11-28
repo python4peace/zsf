@@ -30,20 +30,39 @@
     <footer>
         <p>&copy; 2025 Zina Peace Wellness | Created by Reuben Soul, World Peace & Fitness Ambassador</p>
         <p>Follow us on 
-            <a href="https://www.instagram.com/" target="_blank">Instagram</a> | 
-            <a href="https://www.facebook.com/" target="_blank">Facebook</a> | 
-            <a href="https://www.twitter.com/" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a> | 
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a> | 
+            <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
         </p>
     </footer>
 
-<!-- 🕊️ FLOATING REUBEN LIVE VIDEO -->
-<div id="peace-video-overlay">
-    <div id="video-header">
-        🔴 Reuben Singing4Peace LIVE
-        <span onclick="toggleVideo()" style="float: right; cursor: pointer; font-size: 18px;">❌</span>
+    <!-- 🕊️ FLOATING REUBEN LIVE VIDEO -->
+    <div id="peace-video-overlay" style="
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 380px;
+      height: 215px;
+      z-index: 999999;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border-radius: 20px;
+      background: #fff;
+      cursor: move;
+      overflow: hidden;
+      border: 3px solid #56ab2f;">
+        <div id="video-header" style="
+          background: linear-gradient(45deg, #56ab2f, #a8e063);
+          color: white;
+          padding: 8px;
+          text-align: center;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 1.2;">
+            🔴 Reuben Singing4Peace LIVE
+            <span onclick="toggleVideo()" style="float: right; cursor: pointer; font-size: 18px;">❌</span>
+        </div>
+        <iframe id="live-video" src="https://www.tiktok.com/@reubensing4peace/embed/v2/7571322201652104462" frameborder="0" allowfullscreen style="width:100%; height:172px; border:none;"></iframe>
     </div>
-    <iframe id="live-video" src="https://www.tiktok.com/@reubensing4peace/embed/v2/7571322201652104462" frameborder="0" allowfullscreen></iframe>
-</div>
 
 <script>
 // LOAD YOUR PRODUCTS FROM JSON
@@ -59,7 +78,7 @@ fetch('aliexpress.json')
                 <div class="product-name">${product.name}</div>
                 <div class="product-price">$${product.price}</div>
                 <div class="product-desc">${product.description}</div>
-                <a href="${product.url}" class="btn btn-primary" target="_blank">Buy Now</a>
+                <a href="${product.url}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Buy Now</a>
             `;
             productsList.appendChild(card);
         });
@@ -84,7 +103,7 @@ const performanceVideos = [
 let currentVideoIndex = 0;
 let isDragging = false, currentX, currentY, initialX, initialY;
 
-// Draggable
+// Draggable floating video
 videoOverlay.addEventListener('mousedown', dragStart);
 document.addEventListener('mousemove', drag);
 document.addEventListener('mouseup', dragEnd);
@@ -92,7 +111,8 @@ document.addEventListener('mouseup', dragEnd);
 function dragStart(e) { 
     initialX = e.clientX - videoOverlay.getBoundingClientRect().left; 
     initialY = e.clientY - videoOverlay.getBoundingClientRect().top; 
-    isDragging = true; videoOverlay.style.transition = 'none'; 
+    isDragging = true; 
+    videoOverlay.style.transition = 'none'; 
 }
 function drag(e) { 
     if (isDragging) { 
@@ -105,7 +125,9 @@ function drag(e) {
     } 
 }
 function dragEnd(e) { 
-    initialX = currentX; initialY = currentY; isDragging = false; 
+    initialX = currentX; 
+    initialY = currentY; 
+    isDragging = false; 
     videoOverlay.style.transition = 'all 0.3s ease'; 
 }
 function toggleVideo() { 
@@ -127,7 +149,7 @@ function checkLiveStatus() {
     videoHeader.innerHTML = `🔴 ${randomLiveSource.name} <span onclick="toggleVideo()" style="float: right; cursor: pointer; font-size: 18px;">❌</span>`;
 }
 
-// Start & rotate
+// Start video cycle and live check
 nextPerformanceVideo();
 setInterval(() => {
     if (Math.random() > 0.7) checkLiveStatus();
