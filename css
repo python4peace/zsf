@@ -1,4 +1,7 @@
 /* ============================= */
+/* ZINA PEACE WELLNESS - COMPLETE CSS WITH FLOATING VIDEO */
+/* ============================= */
+
 /* Global Styles */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -174,6 +177,39 @@ footer a:hover {
 }
 
 /* ============================= */
+/* FLOATING REUBEN LIVE VIDEO - NEW! */
+#peace-video-overlay {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    width: 380px !important;
+    height: 215px !important;
+    z-index: 999999 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+    border-radius: 20px !important;
+    background: #fff !important;
+    cursor: move !important;
+    overflow: hidden !important;
+    border: 3px solid #56ab2f !important;
+}
+
+#video-header {
+    background: linear-gradient(45deg, #56ab2f, #a8e063) !important;
+    color: white !important;
+    padding: 8px !important;
+    text-align: center !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+}
+
+#live-video {
+    width: 100% !important;
+    height: 172px !important;
+    border: none !important;
+}
+
+/* ============================= */
 /* Responsive */
 @media (max-width: 768px) {
     .products-grid {
@@ -183,5 +219,28 @@ footer a:hover {
 
     #live-stream iframe {
         height: 300px;
+    }
+
+    /* Mobile floating video */
+    #peace-video-overlay {
+        width: 300px !important;
+        height: 170px !important;
+        bottom: 20px !important;
+        right: 20px !important;
+    }
+
+    #live-video {
+        height: 135px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #peace-video-overlay {
+        width: 260px !important;
+        height: 150px !important;
+    }
+
+    #live-video {
+        height: 115px !important;
     }
 }
