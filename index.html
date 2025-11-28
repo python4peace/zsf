@@ -8,10 +8,10 @@
     <!-- SEO Meta -->
     <meta name="description" content="Founded by Reuben Soul, World Peace Fitness Ambassador. Premium vitamins and wellness products to promote fitness, peace, and unity.">
     <meta name="author" content="Reuben Soul (Reuben Gobah) - Marie Kennedy Gobah Zina Peace Wellness">
-    <meta name="keywords" content="vitamins, supplements, wellness, fitness, nutrition, turmeric, collagen, peace, unity">
+    <meta name="keywords" content="vitamins, supplements, wellness, fitness, nutrition, turmeric, collagen, peace, unity"/>
     <link href="https://zinasing4peacefitness.com/" rel="canonical"/>
     <link rel="stylesheet" href="/assets/styles.css">
-    
+
     <!-- Open Graph / Social -->
     <meta property="og:title" content="Zina Peace Wellness - Premium Vitamins & Supplements"/>
     <meta property="og:description" content="Science-backed nutrition for fitness champions and wellness warriors. Promote peace, unity, and health worldwide."/>
@@ -52,10 +52,9 @@
 
     <!-- Live Music / Peace Promotion Section -->
     <section id="live-stream">
-        <h2>Live Peace & Fitness Show</h2>
+        <h2>🔴 LIVE Peace & Fitness Show</h2>
         <p>Join us live as we sing, dance, and promote peace and unity worldwide!</p>
-        <!-- Embed YouTube / Twitch / RTMP link here -->
-        <iframe width="100%" height="400" src="https://www.youtube.com/embed/live_stream?channel=UCucJzjHDFeuwzXpuQO5Ozlw&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="400" id="main-live-player" src="https://www.youtube.com/embed/live_stream?channel=UCucJzjHDFeuwzXpuQO5Ozlw&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
     </section>
 
     <!-- Products Section (Dropshipping / Manual) -->
@@ -74,27 +73,96 @@
             <a href="https://www.twitter.com/" target="_blank">Twitter</a>
         </p>
     </footer>
-<!-- 🕊️ FLOATING WORLD PEACE VIDEO - COMPLETE -->
+
+<!-- 🕊️ MULTI-PLATFORM FLOATING LIVE VIDEO - YOUR VIDEOS FIXED -->
 <div id="peace-video-overlay" style="position: fixed !important; bottom: 30px !important; right: 30px !important; width: 380px !important; height: 215px !important; z-index: 999999 !important; box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important; border-radius: 20px !important; background: #fff !important; cursor: move !important; overflow: hidden !important; border: 3px solid #56ab2f !important;">
-    <div style="background: linear-gradient(45deg, #56ab2f, #a8e063); color: white; padding: 8px; text-align: center; font-weight: bold; font-size: 14px;">
-        🕊️ Reuben Singing4Peace Live
+    <div id="video-header" style="background: linear-gradient(45deg, #56ab2f, #a8e063); color: white; padding: 8px; text-align: center; font-weight: bold; font-size: 14px;">
+        🔴 Reuben Singing4Peace LIVE
         <span onclick="toggleVideo()" style="float: right; cursor: pointer; font-size: 18px;">❌</span>
     </div>
-    <iframe id="live-video" src="https://www.youtube.com/embed/live_stream?channel=UCucJzjHDFeuwzXpuQO5Ozlw&autoplay=1&mute=1" style="width: 100%; height: 172px; border: none;" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+    <iframe id="live-video" src="https://www.tiktok.com/@reubensing4peace/embed/v2/7571322201652104462" style="width: 100%; height: 172px; border: none;" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
 </div>
 
 <script>
+// MULTI-PLATFORM LIVE SYSTEM - YOUR VIDEOS
 const videoOverlay = document.getElementById('peace-video-overlay');
+const videoHeader = document.getElementById('video-header');
+const liveVideo = document.getElementById('live-video');
+
+// YOUR LIVE SOURCES
+const LIVE_SOURCES = [
+    {name: 'TikTok Live', url: 'https://www.tiktok.com/@reubensing4peace/embed/v2/live'},
+    {name: 'YouTube Live', url: 'https://www.youtube.com/embed/live_stream?channel=UCucJzjHDFeuwzXpuQO5Ozlw&autoplay=1&mute=1'}
+];
+
+// YOUR PERFORMANCE VIDEOS - EXTRACTED FROM YOUR LINKS
+const performanceVideos = [
+    {platform: 'tiktok', id: '7571322201652104462', embed: 'https://www.tiktok.com/@reubensing4peace/embed/v2/7571322201652104462'},
+    {platform: 'tiktok', id: '7496405858843118891', embed: 'https://www.tiktok.com/@reubensing4peace/embed/v2/7496405858843118891'},
+    {platform: 'youtube', id: 'dQw4w9WgXcQ', embed: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ'}
+];
+let currentVideoIndex = 0;
 let isDragging = false, currentX, currentY, initialX, initialY;
+
+// Draggable functionality
 videoOverlay.addEventListener('mousedown', dragStart);
 document.addEventListener('mousemove', drag);
 document.addEventListener('mouseup', dragEnd);
-function dragStart(e) { initialX = e.clientX - videoOverlay.getBoundingClientRect().left; initialY = e.clientY - videoOverlay.getBoundingClientRect().top; isDragging = true; videoOverlay.style.transition = 'none'; }
-function drag(e) { if (isDragging) { currentX = e.clientX - initialX; currentY = e.clientY - initialY; videoOverlay.style.left = currentX + 'px'; videoOverlay.style.top = currentY + 'px'; videoOverlay.style.right = 'auto'; videoOverlay.style.bottom = 'auto'; } }
-function dragEnd(e) { initialX = currentX; initialY = currentY; isDragging = false; videoOverlay.style.transition = 'all 0.3s ease'; }
-function toggleVideo() { document.getElementById('live-video').style.display = document.getElementById('live-video').style.display === 'none' ? 'block' : 'none'; }
+
+function dragStart(e) { 
+    initialX = e.clientX - videoOverlay.getBoundingClientRect().left; 
+    initialY = e.clientY - videoOverlay.getBoundingClientRect().top; 
+    isDragging = true; 
+    videoOverlay.style.transition = 'none'; 
+}
+function drag(e) { 
+    if (isDragging) { 
+        currentX = e.clientX - initialX; 
+        currentY = e.clientY - initialY; 
+        videoOverlay.style.left = currentX + 'px'; 
+        videoOverlay.style.top = currentY + 'px'; 
+        videoOverlay.style.right = 'auto'; 
+        videoOverlay.style.bottom = 'auto'; 
+    } 
+}
+function dragEnd(e) { 
+    initialX = currentX; 
+    initialY = currentY; 
+    isDragging = false; 
+    videoOverlay.style.transition = 'all 0.3s ease'; 
+}
+function toggleVideo() { 
+    liveVideo.style.display = liveVideo.style.display === 'none' ? 'block' : 'none'; 
+}
+
+// Cycle through YOUR videos
+function nextPerformanceVideo() {
+    const video = performanceVideos[currentVideoIndex];
+    liveVideo.src = video.embed;
+    videoHeader.innerHTML = `🎵 ${video.platform.toUpperCase()} Performance ${currentVideoIndex + 1} <span onclick="toggleVideo()" style="float: right; cursor: pointer; font-size: 18px;">❌</span>`;
+    currentVideoIndex = (currentVideoIndex + 1) % performanceVideos.length;
+}
+
+// Check live status and switch sources
+function checkLiveStatus() {
+    const randomLiveSource = LIVE_SOURCES[Math.floor(Math.random() * LIVE_SOURCES.length)];
+    liveVideo.src = randomLiveSource.url;
+    videoHeader.innerHTML = `🔴 ${randomLiveSource.name} <span onclick="toggleVideo()" style="float: right; cursor: pointer; font-size: 18px;">❌</span>`;
+}
+
+// Start with your first TikTok video
+nextPerformanceVideo();
+
+// Smart rotation: Live (30%) → Your Videos (70%)
+setInterval(() => {
+    if (Math.random() > 0.7) {
+        checkLiveStatus();
+    } else {
+        nextPerformanceVideo();
+    }
+}, 35000); // Every 35 seconds
 </script>
-<!-- END FLOATING VIDEO -->
+<!-- END MULTI-PLATFORM FLOATING VIDEO -->
 
     <!-- Optional: Additional scripts for interactivity -->
 </body>
