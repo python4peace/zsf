@@ -1,0 +1,8 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+header, #live-stream, #shop { max-width: 1200px; margin: 2rem auto; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 20px; }
+.products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.product-card { background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 20px; text-align: center; }
+.product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 15px; }
+.btn-primary { background: linear-gradient(45deg, #ff6b6b, #ff8e8e); color: white; padding: 1rem 2rem; border: none; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 1rem; }
+footer { text-align: center; padding: 3rem; background: rgba(0,0,0,0.3); margin-top: 4rem; }
