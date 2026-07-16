@@ -1,2 +1,3 @@
-/reuben    /reuben.html    200
-/books     /reuben.html    200
+/reuben.html    /reuben.html    200
+/reuben         /reuben.html    200
+/*              /index.html     404
