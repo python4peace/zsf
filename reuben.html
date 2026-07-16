@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Reuben Soul — The African Soul Man | World Peace & Fitness Ambassador</title>
+<meta name="description" content="Reuben Soul — The African Soul Man. World Peace & Fitness Ambassador, Los Angeles. Author, Trumpeter, Fitness Trainer, Healer, Karaoke DJ. Books, Services, Live Classes."/>
+<meta property="og:title" content="Reuben Soul — The African Soul Man"/>
+<meta property="og:description" content="Author of The Blood, The Rubber, and The Steel. World Peace & Fitness Ambassador, Los Angeles."/>
+<meta property="og:url" content="https://zinasing4peacefitness.com"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --red:#BF0A30;
+  --dark-red:#8B0000;
+  --gold:#C8A040;
+  --blue:#002868;
+  --black:#080808;
+  --white:#FFFFFF;
+  --cream:#FDF8F2;
+  --grey:#888;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(8,8,8,0.96);
+  border-bottom:2px solid var(--gold);
+  padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;
+}
+.nav-brand{
+  font-family:'Playfair Display',serif;
+  font-size:1.1rem;color:var(--gold);
+  text-decoration:none;letter-spacing:1px;
+}
+.nav-links{display:flex;gap:6px;align-items:center;flex-wrap:wrap;}
+.nav-links a{
+  color:var(--white);text-decoration:none;
+  font-size:0.78rem;font-weight:500;
+  padding:6px 10px;border-radius:4px;
+  transition:all 0.2s;letter-spacing:0.5px;
+  text-transform:uppercase;
+}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{
+  background:var(--red)!important;
+  color:var(--white)!important;
+  border-radius:6px!important;
+  font-weight:600!important;
+}
+.nav-cta:hover{background:var(--dark-red)!important;}
+.hamburger{display:none;cursor:pointer;background:none;border:none;color:var(--white);font-size:1.5rem;}
+.mobile-menu{
+  display:none;
+  position:fixed;top:64px;left:0;right:0;
+  background:rgba(8,8,8,0.98);
+  padding:20px;z-index:999;
+  border-bottom:2px solid var(--gold);
+  flex-direction:column;gap:10px;
+}
+.mobile-menu a{
+  color:var(--white);text-decoration:none;
+  padding:12px;border-radius:6px;
+  font-size:0.9rem;text-transform:uppercase;
+  letter-spacing:1px;
+}
+.mobile-menu a:hover{background:var(--red);color:var(--white);}
+.mobile-menu.open{display:flex;}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  background:linear-gradient(135deg,var(--black) 0%,#1a0505 40%,#0a0a1a 100%);
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:100px 24px 60px;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    0deg,
+    transparent,transparent 48px,
+    rgba(191,10,48,0.06) 48px,rgba(191,10,48,0.06) 50px
+  );
+}
+.hero-content{position:relative;z-index:1;max-width:900px;}
+.hero-flag{
+  display:flex;gap:0;margin:0 auto 28px;
+  width:80px;height:16px;border-radius:2px;overflow:hidden;
+}
+.flag-blue{flex:0 0 30%;background:var(--blue);display:flex;align-items:center;justify-content:center;}
+.flag-blue span{color:white;font-size:10px;}
+.flag-stripes{flex:1;display:flex;flex-direction:column;}
+.flag-stripes div{flex:1;}
+.flag-stripes div:nth-child(odd){background:var(--red);}
+.flag-stripes div:nth-child(even){background:var(--white);}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.8rem,7vw,5.5rem);
+  font-weight:900;line-height:1.05;
+  color:var(--white);margin-bottom:8px;
+}
+.hero h1 span{color:var(--red);}
+.hero-subtitle{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1rem,2.5vw,1.5rem);
+  color:var(--gold);margin-bottom:20px;
+  font-style:italic;letter-spacing:1px;
+}
+.hero-tagline{
+  font-size:clamp(0.85rem,1.8vw,1.05rem);
+  color:rgba(255,255,255,0.7);
+  max-width:680px;margin:0 auto 36px;
+  line-height:1.7;
+}
+.hero-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn{
+  display:inline-block;padding:14px 28px;
+  border-radius:8px;text-decoration:none;
+  font-weight:600;font-size:0.9rem;
+  letter-spacing:1px;text-transform:uppercase;
+  transition:all 0.25s;border:2px solid transparent;
+  cursor:pointer;
+}
+.btn-red{background:var(--red);color:var(--white);border-color:var(--red);}
+.btn-red:hover{background:var(--dark-red);border-color:var(--dark-red);}
+.btn-gold{background:transparent;color:var(--gold);border-color:var(--gold);}
+.btn-gold:hover{background:var(--gold);color:var(--black);}
+.btn-blue{background:var(--blue);color:var(--white);border-color:var(--blue);}
+.btn-blue:hover{background:#003580;}
+
+/* SOCIAL STRIP */
+.social-strip{
+  background:var(--blue);
+  padding:14px 24px;
+  display:flex;align-items:center;justify-content:center;gap:24px;
+  flex-wrap:wrap;
+}
+.social-strip a{
+  color:var(--white);text-decoration:none;
+  font-size:0.85rem;font-weight:500;
+  display:flex;align-items:center;gap:6px;
+  opacity:0.9;transition:opacity 0.2s;
+}
+.social-strip a:hover{opacity:1;color:var(--gold);}
+.social-icon{font-size:1.1rem;}
+
+/* SECTIONS */
+section{padding:80px 24px;}
+.container{max-width:1100px;margin:0 auto;}
+.section-label{
+  font-size:0.7rem;letter-spacing:4px;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:12px;
+}
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:700;line-height:1.15;
+  margin-bottom:16px;
+}
+.section-rule{
+  width:60px;height:3px;
+  background:var(--red);margin-bottom:40px;
+}
+.text-center{text-align:center;}
+.text-center .section-rule{margin-left:auto;margin-right:auto;}
+
+/* BOOKS */
+.books-bg{background:linear-gradient(180deg,#0a0a0a 0%,#0d0507 100%);}
+.books-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;margin-top:20px;}
+.book-card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(200,160,64,0.25);
+  border-radius:16px;padding:36px;
+  transition:border-color 0.3s,transform 0.3s;
+}
+.book-card:hover{border-color:var(--gold);transform:translateY(-4px);}
+.book-badge{
+  display:inline-block;padding:4px 12px;
+  background:var(--red);color:var(--white);
+  border-radius:20px;font-size:0.7rem;
+  font-weight:600;letter-spacing:1px;
+  text-transform:uppercase;margin-bottom:20px;
+}
+.book-badge.new{background:var(--gold);color:var(--black);}
+.book-title{
+  font-family:'Playfair Display',serif;
+  font-size:1.5rem;font-weight:700;
+  color:var(--white);margin-bottom:8px;
+  line-height:1.2;
+}
+.book-subtitle{color:var(--gold);font-size:0.85rem;margin-bottom:18px;font-style:italic;}
+.book-desc{
+  color:rgba(255,255,255,0.7);
+  font-size:0.88rem;line-height:1.7;
+  margin-bottom:24px;
+}
+.book-price{
+  font-size:1.4rem;font-weight:700;
+  color:var(--gold);margin-bottom:20px;
+}
+
+/* LIVE SECTION */
+.live-bg{background:#0a0d08;}
+.live-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:20px;}
+.live-card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(191,10,48,0.3);
+  border-radius:16px;overflow:hidden;
+  transition:border-color 0.3s;
+}
+.live-card:hover{border-color:var(--red);}
+.live-header{
+  background:var(--red);
+  padding:16px 24px;
+  display:flex;align-items:center;gap:10px;
+}
+.live-dot{
+  width:10px;height:10px;border-radius:50%;
+  background:#ff4444;
+  animation:pulse 1.5s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.live-header h3{font-size:0.85rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;}
+.live-body{padding:24px;}
+.live-body p{color:rgba(255,255,255,0.7);font-size:0.88rem;line-height:1.6;margin-bottom:20px;}
+.live-embed{
+  width:100%;aspect-ratio:16/9;
+  border-radius:8px;overflow:hidden;
+  background:#111;
+  margin-bottom:16px;
+}
+.live-embed iframe{width:100%;height:100%;border:none;}
+.live-embed-placeholder{
+  width:100%;aspect-ratio:16/9;
+  border-radius:8px;
+  background:linear-gradient(135deg,#111,#1a0a0a);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:12px;cursor:pointer;
+  border:2px dashed rgba(191,10,48,0.4);
+  transition:border-color 0.3s;
+}
+.live-embed-placeholder:hover{border-color:var(--red);}
+.live-embed-placeholder .play-icon{font-size:3rem;}
+.live-embed-placeholder p{color:var(--gold);font-size:0.85rem;letter-spacing:1px;}
+
+/* SERVICES */
+.services-bg{background:linear-gradient(180deg,#0d0507 0%,#080808 100%);}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:20px;}
+.service-card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(200,160,64,0.2);
+  border-radius:14px;padding:28px 20px;
+  text-align:center;transition:all 0.3s;
+  cursor:pointer;
+}
+.service-card:hover{
+  border-color:var(--gold);
+  background:rgba(200,160,64,0.05);
+  transform:translateY(-3px);
+}
+.service-icon{font-size:2.5rem;margin-bottom:14px;}
+.service-title{
+  font-family:'Playfair Display',serif;
+  font-size:1rem;font-weight:700;
+  color:var(--white);margin-bottom:8px;
+}
+.service-desc{color:rgba(255,255,255,0.6);font-size:0.8rem;line-height:1.5;}
+
+/* BIO */
+.bio-bg{background:#08080a;}
+.bio-grid{display:grid;grid-template-columns:1fr 2fr;gap:60px;align-items:start;}
+.bio-awards{display:flex;flex-direction:column;gap:16px;}
+.award{
+  background:rgba(200,160,64,0.08);
+  border:1px solid rgba(200,160,64,0.25);
+  border-radius:10px;padding:16px;
+}
+.award-icon{font-size:1.5rem;margin-bottom:6px;}
+.award-title{font-size:0.8rem;font-weight:600;color:var(--gold);margin-bottom:4px;}
+.award-desc{font-size:0.75rem;color:rgba(255,255,255,0.6);}
+.bio-text p{
+  color:rgba(255,255,255,0.8);
+  font-size:0.95rem;line-height:1.8;
+  margin-bottom:16px;
+}
+.bio-quote{
+  border-left:4px solid var(--red);
+  padding:16px 20px;
+  margin:24px 0;
+  font-family:'Playfair Display',serif;
+  font-size:1.1rem;font-style:italic;
+  color:var(--gold);
+}
+
+/* WELLNESS */
+.wellness-bg{background:linear-gradient(180deg,#08080a 0%,#080810 100%);}
+.wellness-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:20px;}
+.wellness-card{
+  background:rgba(0,40,104,0.15);
+  border:1px solid rgba(0,40,104,0.4);
+  border-radius:14px;padding:24px;
+  transition:all 0.3s;
+}
+.wellness-card:hover{border-color:var(--blue);transform:translateY(-3px);}
+.wellness-name{font-weight:600;color:var(--white);margin-bottom:6px;font-size:0.95rem;}
+.wellness-desc{color:rgba(255,255,255,0.6);font-size:0.8rem;line-height:1.5;}
+
+/* FITNESS APP */
+.app-bg{background:#050810;}
+.app-box{
+  background:rgba(0,40,104,0.2);
+  border:2px solid var(--blue);
+  border-radius:20px;padding:48px;
+  text-align:center;max-width:700px;margin:0 auto;
+}
+.app-box h3{
+  font-family:'Playfair Display',serif;
+  font-size:2rem;color:var(--white);
+  margin-bottom:12px;
+}
+.app-box p{
+  color:rgba(255,255,255,0.7);
+  margin-bottom:28px;line-height:1.7;
+}
+
+/* CONTACT */
+.contact-bg{background:linear-gradient(180deg,#080808 0%,#0a0505 100%);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.contact-info{display:flex;flex-direction:column;gap:20px;}
+.contact-item{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:20px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(200,160,64,0.2);
+  border-radius:12px;
+}
+.contact-icon{font-size:1.5rem;flex-shrink:0;}
+.contact-label{font-size:0.7rem;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;}
+.contact-value{color:var(--white);font-size:0.9rem;}
+.contact-value a{color:var(--white);text-decoration:none;}
+.contact-value a:hover{color:var(--gold);}
+
+/* FORM */
+.contact-form{display:flex;flex-direction:column;gap:16px;}
+.form-group{display:flex;flex-direction:column;gap:6px;}
+.form-group label{font-size:0.75rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;}
+.form-group input,
+.form-group textarea,
+.form-group select{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(200,160,64,0.3);
+  border-radius:8px;padding:12px 16px;
+  color:var(--white);font-family:'Inter',sans-serif;
+  font-size:0.9rem;outline:none;
+  transition:border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{border-color:var(--gold);}
+.form-group textarea{resize:vertical;min-height:120px;}
+.form-group select option{background:var(--black);}
+
+/* NEWSLETTER */
+.newsletter-bg{background:var(--red);}
+.newsletter-box{text-align:center;max-width:600px;margin:0 auto;}
+.newsletter-box h2{
+  font-family:'Playfair Display',serif;
+  font-size:2rem;margin-bottom:12px;
+}
+.newsletter-box p{margin-bottom:28px;opacity:0.9;line-height:1.6;}
+.newsletter-form{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+.newsletter-form input{
+  flex:1;min-width:240px;padding:14px 18px;
+  border-radius:8px;border:none;
+  background:rgba(255,255,255,0.15);
+  color:var(--white);font-size:0.9rem;outline:none;
+}
+.newsletter-form input::placeholder{color:rgba(255,255,255,0.7);}
+.newsletter-form input:focus{background:rgba(255,255,255,0.25);}
+.btn-white{background:var(--white);color:var(--red);border-color:var(--white);}
+.btn-white:hover{background:var(--cream);}
+
+/* FOOTER */
+footer{
+  background:var(--black);
+  border-top:2px solid var(--gold);
+  padding:48px 24px 24px;
+  text-align:center;
+}
+.footer-name{
+  font-family:'Playfair Display',serif;
+  font-size:1.5rem;color:var(--gold);
+  margin-bottom:6px;
+}
+.footer-title{color:rgba(255,255,255,0.5);font-size:0.8rem;margin-bottom:24px;}
+.footer-social{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:24px;}
+.footer-social a{
+  color:rgba(255,255,255,0.6);
+  text-decoration:none;font-size:0.8rem;
+  padding:8px 14px;border:1px solid rgba(255,255,255,0.1);
+  border-radius:20px;transition:all 0.2s;
+}
+.footer-social a:hover{color:var(--gold);border-color:var(--gold);}
+.footer-flag{
+  display:flex;height:4px;max-width:300px;
+  margin:20px auto;border-radius:2px;overflow:hidden;
+}
+.footer-flag div:nth-child(1){flex:1;background:var(--blue);}
+.footer-flag div:nth-child(2){flex:2;background:var(--red);}
+.footer-flag div:nth-child(3){flex:2;background:var(--white);}
+.footer-copy{color:rgba(255,255,255,0.3);font-size:0.75rem;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .hamburger{display:block;}
+  .bio-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  section{padding:60px 20px;}
+  .app-box{padding:32px 24px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-brand">REUBEN SOUL</a>
+  <div class="nav-links">
+    <a href="#books">Books</a>
+    <a href="#live">Live Classes</a>
+    <a href="#services">Services</a>
+    <a href="#bio">About</a>
+    <a href="#wellness">Wellness</a>
+    <a href="#app">Fitness App</a>
+    <a href="#contact" class="nav-cta">Book Now</a>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#books" onclick="toggleMenu()">📚 Books</a>
+  <a href="#live" onclick="toggleMenu()">🔴 Live Classes</a>
+  <a href="#services" onclick="toggleMenu()">💪 Services</a>
+  <a href="#bio" onclick="toggleMenu()">🎺 About</a>
+  <a href="#wellness" onclick="toggleMenu()">🌿 Wellness</a>
+  <a href="#app" onclick="toggleMenu()">📱 Fitness App</a>
+  <a href="#contact" onclick="toggleMenu()">✉️ Book Now</a>
+</div>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <div class="hero-flag" aria-label="Liberian flag">
+      <div class="flag-blue"><span>★</span></div>
+      <div class="flag-stripes">
+        <div></div><div></div><div></div>
+        <div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div>
+      </div>
+    </div>
+    <div class="section-label">World Peace & Fitness Ambassador — Los Angeles</div>
+    <h1>REUBEN<br/><span>THE SOUL MAN</span></h1>
+    <div class="hero-subtitle">The African Soul Man — Named by James Brown</div>
+    <p class="hero-tagline">
+      Gold & Silver Medalist · World Championships for Performing Arts ·
+      Author · Trumpeter · Certified Fitness Trainer · Deep Tissue Healer ·
+      Karaoke DJ · Chess Instructor · Founder of Zina Peace Wellness
+    </p>
+    <div class="hero-buttons">
+      <a href="#books" class="btn btn-red">Order My Books</a>
+      <a href="#live" class="btn btn-gold">Join Live Class</a>
+      <a href="#contact" class="btn btn-blue">Book a Service</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL STRIP -->
+<div class="social-strip">
+  <a href="https://www.tiktok.com/t/ZTS98Gwbs/" target="_blank" rel="noopener">
+    <span class="social-icon">🎵</span> TikTok Video 1
+  </a>
+  <a href="https://www.tiktok.com/t/ZTS9LNe1Y/" target="_blank" rel="noopener">
+    <span class="social-icon">🎵</span> TikTok Video 2
+  </a>
+  <a href="https://youtu.be/EEcA0_2yGZc" target="_blank" rel="noopener">
+    <span class="social-icon">▶️</span> YouTube
+  </a>
+  <a href="https://www.amazon.com/dp/B0H77D7GSX" target="_blank" rel="noopener">
+    <span class="social-icon">📖</span> Order New Book
+  </a>
+  <a href="https://www.amazon.com/dp/B0FBMHDM9L" target="_blank" rel="noopener">
+    <span class="social-icon">📗</span> The Strength to Stand
+  </a>
+</div>
+
+<!-- BOOKS -->
+<section id="books" class="books-bg">
+  <div class="container">
+    <div class="section-label">Published Works</div>
+    <h2 class="section-title">My Books</h2>
+    <div class="section-rule"></div>
+    <div class="books-grid">
+
+      <!-- Book 1 - New -->
+      <div class="book-card">
+        <div class="book-badge new">NEW — Available Now</div>
+        <div class="book-title">The Blood, The Rubber, and The Steel</div>
+        <div class="book-subtitle">How Liberia Built America's Superpower and Saved the Free World</div>
+        <p class="book-desc">
+          The rubber in the tires of the Allied jeeps at Normandy came from Liberia.
+          Workers were paid 18 cents a day. Firestone earned $150 million.
+          My grand-uncle bled in an Allied uniform. They sent him home with nothing.
+          <br/><br/>
+          278 pages of documented history combined with deeply personal testimony.
+          Based on historical records including the Library of Congress.
+          This book will change everything you thought you knew.
+        </p>
+        <div class="book-price">$9.99 Kindle</div>
+        <a href="https://www.amazon.com/dp/B0H77D7GSX"
+           target="_blank" rel="noopener" class="btn btn-red">
+          Order on Amazon →
+        </a>
+      </div>
+
+      <!-- Book 2 -->
+      <div class="book-card">
+        <div class="book-badge">Available Now</div>
+        <div class="book-title">The Strength to Stand</div>
+        <div class="book-subtitle">A Personal Journey of Faith, Survival, and Purpose</div>
+        <p class="book-desc">
+          The story of a man who survived a civil war, crossed an ocean on a refugee ship,
+          slept under a staircase in America, and rose to perform with James Brown on
+          national television. A testament to what the human spirit can endure and overcome
+          when it refuses to give up.
+        </p>
+        <div class="book-price">Available on Amazon</div>
+        <a href="https://www.amazon.com/dp/B0FBMHDM9L"
+           target="_blank" rel="noopener" class="btn btn-gold">
+          Order on Amazon →
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LIVE CLASSES -->
+<section id="live" class="live-bg">
+  <div class="container">
+    <div class="section-label">Join Me Live</div>
+    <h2 class="section-title">Live Classes & Performances</h2>
+    <div class="section-rule"></div>
+    <p style="color:rgba(255,255,255,0.7);margin-bottom:40px;max-width:650px;line-height:1.7;">
+      Join me live for fitness classes, karaoke performances, and chess strategy sessions.
+      Watch my videos below and subscribe to be notified when I go live.
+    </p>
+    <div class="live-grid">
+
+      <!-- Fitness Class -->
+      <div class="live-card">
+        <div class="live-header">
+          <div class="live-dot"></div>
+          <h3>Afro Fit Live Class</h3>
+        </div>
+        <div class="live-body">
+          <p>Afro Fit Dance, fitness training, and wellness sessions. Subscribe to my YouTube channel and turn on notifications to join live.</p>
+          <div class="live-embed">
+            <iframe
+              src="https://www.youtube.com/embed/EEcA0_2yGZc"
+              title="Reuben Soul YouTube"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <a href="https://youtu.be/EEcA0_2yGZc" target="_blank" rel="noopener"
+             class="btn btn-red" style="display:block;text-align:center;">
+            Watch on YouTube
+          </a>
+        </div>
+      </div>
+
+      <!-- Karaoke -->
+      <div class="live-card">
+        <div class="live-header">
+          <div class="live-dot"></div>
+          <h3>Karaoke & Trumpet Performance</h3>
+        </div>
+        <div class="live-body">
+          <p>Watch me perform live — karaoke, trumpet, and pure soul. The DJ tried to turn me down mid-performance. Watch what happened.</p>
+          <div class="live-embed">
+            <iframe
+              src="https://www.tiktok.com/embed/v2/ZTS98Gwbs"
+              title="Reuben Soul TikTok Performance"
+              allow="autoplay"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <a href="https://www.tiktok.com/t/ZTS98Gwbs/" target="_blank" rel="noopener"
+             class="btn btn-gold" style="display:block;text-align:center;margin-bottom:10px;">
+            Watch on TikTok
+          </a>
+          <a href="https://www.tiktok.com/t/ZTS9LNe1Y/" target="_blank" rel="noopener"
+             class="btn btn-blue" style="display:block;text-align:center;">
+            TikTok Video 2
+          </a>
+        </div>
+      </div>
+
+      <!-- Chess -->
+      <div class="live-card">
+        <div class="live-header">
+          <div class="live-dot" style="background:#C8A040;"></div>
+          <h3>Chess Brain Exercise</h3>
+        </div>
+        <div class="live-body">
+          <p>Chess sharpens the mind the same way exercise strengthens the body. Join my chess strategy sessions — for all levels from beginners to advanced players.</p>
+          <div class="live-embed-placeholder" onclick="alert('Chess sessions available — contact me to schedule a session!')">
+            <div class="play-icon">♟️</div>
+            <p>CHESS STRATEGY SESSIONS</p>
+            <p style="font-size:0.75rem;color:rgba(255,255,255,0.5);">Click to schedule</p>
+          </div>
+          <a href="#contact" class="btn btn-gold" style="display:block;text-align:center;">
+            Book a Chess Session
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services-bg">
+  <div class="container">
+    <div class="section-label text-center">What I Offer</div>
+    <h2 class="section-title text-center">My Services</h2>
+    <div class="section-rule" style="margin:0 auto 40px;"></div>
+    <div class="services-grid">
+      <div class="service-card" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        <div class="service-icon">💪</div>
+        <div class="service-title">Certified Fitness Training</div>
+        <p class="service-desc">Five consecutive years recognized as one of America's best. Personal training, group sessions, and customized wellness programs.</p>
+      </div>
+      <div class="service-card" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        <div class="service-icon">♟️</div>
+        <div class="service-title">Chess Brain Exercise</div>
+        <p class="service-desc">Strategy, focus, and mental sharpness. One-on-one chess instruction for all ages and skill levels.</p>
+      </div>
+      <div class="service-card" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        <div class="service-icon">🎵</div>
+        <div class="service-title">Afro Fit Dance</div>
+        <p class="service-desc">African-inspired movement that combines fitness with the joy of dance. Classes for all fitness levels.</p>
+      </div>
+      <div class="service-card" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        <div class="service-icon">🎺</div>
+        <div class="service-title">Karaoke DJ & Trumpet Entertainment</div>
+        <p class="service-desc">Peace Unity Karaoke DJ with live trumpet performance. Events, parties, and community celebrations.</p>
+      </div>
+      <div class="service-card" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        <div class="service-icon">🤲</div>
+        <div class="service-title">Deep Tissue Healing Massage</div>
+        <p class="service-desc">Certified deep tissue massage therapy for pain relief, recovery, and total body healing.</p>
+      </div>
+      <div class="service-card" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        <div class="service-icon">🌍</div>
+        <div class="service-title">Speaking & Advocacy</div>
+        <p class="service-desc">World peace advocacy, motivational speaking, and book readings. Available for events across Los Angeles and nationally.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIO -->
+<section id="bio" class="bio-bg">
+  <div class="container">
+    <div class="section-label">The Story</div>
+    <h2 class="section-title">About Reuben Soul</h2>
+    <div class="section-rule"></div>
+    <div class="bio-grid">
+      <div class="bio-awards">
+        <div class="award">
+          <div class="award-icon">🏅</div>
+          <div class="award-title">Gold & Silver Medalist</div>
+          <div class="award-desc">World Championships for Performing Arts</div>
+        </div>
+        <div class="award">
+          <div class="award-icon">🎺</div>
+          <div class="award-title">World Record</div>
+          <div class="award-desc">Longest sustained note on the US National Anthem on trumpet</div>
+        </div>
+        <div class="award">
+          <div class="award-icon">🌍</div>
+          <div class="award-title">World Peace & Fitness Ambassador</div>
+          <div class="award-desc">Awarded in Los Angeles, California</div>
+        </div>
+        <div class="award">
+          <div class="award-icon">📺</div>
+          <div class="award-title">Television Performer</div>
+          <div class="award-desc">Pop Across America on TNN with James Brown</div>
+        </div>
+        <div class="award">
+          <div class="award-icon">📚</div>
+          <div class="award-title">Published Author</div>
+          <div class="award-desc">Two books available on Amazon</div>
+        </div>
+      </div>
+      <div class="bio-text">
+        <p>
+          James Brown called me <strong style="color:var(--gold);">The African Soul Man</strong>.
+          He gave me that name on the stage of Pop Across America on TNN,
+          and I have carried it as both a gift and a responsibility ever since.
+        </p>
+        <div class="bio-quote">
+          "The rubber that won World War II came from Liberia.
+          My family paid for this world with blood and iron and sacrifice.
+          And then I came to live in it — and was told I don't belong."
+        </div>
+        <p>
+          I was born in Liberia. I survived a civil war. I was lost at sea on a refugee ship.
+          I slept under a staircase when I first arrived in America.
+          I was promoted to manager in three months at my first job —
+          then fired for being late once after performing on national television.
+        </p>
+        <p>
+          I am a Gold and Silver Medalist at the World Championships for Performing Arts.
+          I hold the record for the longest sustained note on the United States National Anthem
+          played on trumpet. I have been recognized as a World Peace and Fitness Ambassador
+          in Los Angeles.
+        </p>
+        <p>
+          I have spent my life using music, movement, and healing as instruments of peace.
+          My fitness app, my books, my services — all of them exist because I believe
+          that a body well-fed, well-moved, and well-loved is the foundation of a peaceful world.
+        </p>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;">
+          This website is dedicated to the memory of
+          <strong style="color:var(--gold);">Marie Kennedy Gobah</strong>
+          and <strong style="color:var(--gold);">Zina</strong> —
+          whose love lives in everything I do.
+        </p>
+        <div style="margin-top:24px;">
+          <a href="#contact" class="btn btn-red">Contact Reuben</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WELLNESS PRODUCTS -->
+<section id="wellness" class="wellness-bg">
+  <div class="container">
+    <div class="section-label">Zina Peace Wellness</div>
+    <h2 class="section-title">Premium Vitamins & Supplements</h2>
+    <div class="section-rule"></div>
+    <p style="color:rgba(255,255,255,0.7);max-width:650px;margin-bottom:40px;line-height:1.7;">
+      Science-backed nutrition for fitness champions and wellness warriors.
+      In memory of Marie Kennedy Gobah and Zina — founded on the belief that
+      the right nutrition changes everything.
+    </p>
+    <div class="wellness-grid">
+      <div class="wellness-card">
+        <div class="wellness-name">🌿 Turmeric Complex</div>
+        <div class="wellness-desc">Anti-inflammatory support. Joint health and natural pain relief.</div>
+      </div>
+      <div class="wellness-card">
+        <div class="wellness-name">💊 CoQ10</div>
+        <div class="wellness-desc">Heart health and energy production at the cellular level.</div>
+      </div>
+      <div class="wellness-card">
+        <div class="wellness-name">💪 Creatine</div>
+        <div class="wellness-desc">Performance, strength, and muscle recovery for serious athletes.</div>
+      </div>
+      <div class="wellness-card">
+        <div class="wellness-name">✨ Collagen</div>
+        <div class="wellness-desc">Skin, joint, and connective tissue health. Look and feel younger.</div>
+      </div>
+      <div class="wellness-card">
+        <div class="wellness-name">🧠 5-HTP (Griffonia)</div>
+        <div class="wellness-desc">The natural mood and serotonin supplement from West African plants. As documented in The Blood, The Rubber, and The Steel.</div>
+      </div>
+      <div class="wellness-card">
+        <div class="wellness-name">🌱 Vitamin D3 + K2</div>
+        <div class="wellness-desc">Immune support, bone density, and whole-body wellness.</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a href="#contact" class="btn btn-gold">Inquire About Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- FITNESS APP -->
+<section id="app" class="app-bg">
+  <div class="container">
+    <div class="app-box">
+      <div style="font-size:3rem;margin-bottom:16px;">📱</div>
+      <h3>Fit4Unity Fitness App</h3>
+      <div class="section-rule" style="margin:16px auto 24px;"></div>
+      <p>
+        Track your workouts, monitor your nutrition, and connect with
+        Reuben's complete fitness methodology — all in one place.
+        The app that brings African fitness wisdom together with
+        modern exercise science.
+      </p>
+      <a href="https://fit4unity.onrender.com/"
+         target="_blank" rel="noopener"
+         class="btn btn-gold">
+        Open Fit4Unity App →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-bg" style="padding:60px 24px;">
+  <div class="newsletter-box">
+    <h2>Get a Free Chapter</h2>
+    <p>
+      Sign up and receive a free chapter of
+      <em>The Blood, The Rubber, and The Steel</em>
+      plus updates on live classes, new books, and events.
+    </p>
+    <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+      <input type="text" placeholder="Your Name" required/>
+      <input type="email" placeholder="Your Email Address" required/>
+      <button type="submit" class="btn btn-white">Get Free Chapter</button>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-bg">
+  <div class="container">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Book a Service or Send a Message</h2>
+    <div class="section-rule"></div>
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">
+              <a href="mailto:singing4unity@gmail.com">singing4unity@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">
+              <a href="tel:2133999942">(213) 399-9942</a><br/>
+              <a href="tel:8189756968">(818) 975-6968</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Los Angeles, California</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🌐</div>
+          <div>
+            <div class="contact-label">Website</div>
+            <div class="contact-value">
+              <a href="https://zinasing4peacefitness.com">zinasing4peacefitness.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div>
+            <div class="contact-label">Follow Me</div>
+            <div class="contact-value">
+              <a href="https://www.tiktok.com/t/ZTS98Gwbs/" target="_blank" rel="noopener">TikTok</a> &nbsp;·&nbsp;
+              <a href="https://youtu.be/EEcA0_2yGZc" target="_blank" rel="noopener">YouTube</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="handleContact(event)">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Full name" required/>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com" required/>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="(555) 000-0000"/>
+        </div>
+        <div class="form-group">
+          <label>I'm Interested In</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>Fitness Training</option>
+            <option>Chess Instruction</option>
+            <option>Afro Fit Dance Class</option>
+            <option>Karaoke DJ & Trumpet Entertainment</option>
+            <option>Deep Tissue Massage</option>
+            <option>Speaking / Book Event</option>
+            <option>Wellness Products</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell me how I can help you..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-red" style="width:100%;padding:16px;">
+          Send Message
+        </button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Reuben Soul</div>
+  <div class="footer-title">The African Soul Man · World Peace & Fitness Ambassador · Los Angeles</div>
+  <div class="footer-social">
+    <a href="https://www.tiktok.com/t/ZTS98Gwbs/" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://youtu.be/EEcA0_2yGZc" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.amazon.com/dp/B0H77D7GSX" target="_blank" rel="noopener">New Book</a>
+    <a href="https://www.amazon.com/dp/B0FBMHDM9L" target="_blank" rel="noopener">Strength to Stand</a>
+    <a href="https://fit4unity.onrender.com/" target="_blank" rel="noopener">Fitness App</a>
+    <a href="mailto:singing4unity@gmail.com">Email</a>
+  </div>
+  <div class="footer-flag">
+    <div></div><div></div><div></div>
+  </div>
+  <div class="footer-copy">
+    © 2025 Reuben Soul · zinasing4peacefitness.com · singing4unity@gmail.com<br/>
+    In loving memory of Marie Kennedy Gobah and Zina
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  const m = document.getElementById('mobileMenu');
+  m.classList.toggle('open');
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(e){
+  const menu = document.getElementById('mobileMenu');
+  const hamburger = document.querySelector('.hamburger');
+  if(menu.classList.contains('open') &&
+     !menu.contains(e.target) &&
+     !hamburger.contains(e.target)){
+    menu.classList.remove('open');
+  }
+});
+
+function handleContact(e){
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  btn.textContent = '✅ Message Sent!';
+  btn.style.background = '#1a7a3a';
+  setTimeout(()=>{
+    btn.textContent = 'Send Message';
+    btn.style.background = '';
+    e.target.reset();
+  }, 3000);
+  // Open email client with the form data as backup
+  const name = e.target.querySelector('input[type="text"]').value;
+  const email = e.target.querySelector('input[type="email"]').value;
+  const service = e.target.querySelector('select').value;
+  const msg = e.target.querySelector('textarea').value;
+  const mailto = `mailto:singing4unity@gmail.com?subject=Inquiry from ${encodeURIComponent(name)} - ${encodeURIComponent(service)}&body=${encodeURIComponent('Name: '+name+'\nEmail: '+email+'\nService: '+service+'\n\nMessage:\n'+msg)}`;
+  window.location.href = mailto;
+}
+
+function handleNewsletter(e){
+  e.preventDefault();
+  const btn = e.target.querySelector('button');
+  btn.textContent = '✅ You\'re Signed Up!';
+  setTimeout(()=>{
+    btn.textContent = 'Get Free Chapter';
+    e.target.reset();
+  }, 3000);
+  const email = e.target.querySelector('input[type="email"]').value;
+  const name  = e.target.querySelector('input[type="text"]').value;
+  window.location.href = `mailto:singing4unity@gmail.com?subject=Newsletter Signup - ${encodeURIComponent(name)}&body=New newsletter signup:%0A%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}`;
+}
+
+// Smooth scroll for all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target) target.scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
